@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body{
+  height: 715px;
+  background: #0c89c783;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.content-title{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-busqueda{
+  width: 960px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 20px 10px;
+  background: white;
+}
+
+.content-input-logo{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0px 0px 15px;
+}
+
+.logo-alura{
+  width: 100px;
+}
+
+.content-input-button{
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.content-table{
+  width: 100%;
+  height: 66%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.button-seleccion{
+  display: flex;
+  flex-direction: row;
+}
+
+.selectButton{
+  background: #C8DDF2;
+  color: rgb(155, 155, 155);
+  font-family: 'Acme', sans-serif;
+  font-size: 18px;
+  border: none;
+  height: 40px;
+  padding: 0px 35px 0px 35px;
+}
+
+.system-update-delete{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+

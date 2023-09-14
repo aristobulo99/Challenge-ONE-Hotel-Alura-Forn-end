@@ -1,0 +1,66 @@
+<body>
+  <section class="content-reserva">
+      <form class="content-from" #registrarReserva [formGroup]="formularioDeReserva">
+          <h1 class="title">SISTEMA DE RESERVAS</h1>
+
+          <div>
+              <h2 class="sub-title">FECHA DE CHECK IN</h2>
+              <input class="input-general" type="date" formControlName="fechaInit" [min]="minimumReservationDateIn" (change)="selectDateIn()">
+          </div>
+
+          <div>
+              <h2 class="sub-title">FECHA DE CHECK OUT</h2>
+              <input class="input-general" type="date" formControlName="fechaOut" [min]="minimumReservationDateIn" (change)="contizarReserva()">
+          </div>
+
+          <div>
+              <h2 class="sub-title">FORMA DE PAGO</h2>
+              <select class="input-select" formControlName="formaDePago">
+                  <option value=""></option>
+                  <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+                  <option value="Tarjeta de Debito">Tarjeta de Debito</option>
+                  <option value="Efectivo">Efectivo</option>
+              </select>
+          </div>
+
+          <div>
+              <h2 class="sub-title">VALOR DE LA RESERVA</h2>
+              <input class="input-general" type="text" value="$" disabled="true" #valorDeReserva>
+          </div>
+
+          <div class="content-button">
+              <button class="button-general" (click)="registraInformacio()">
+                  SIGUIENTE
+              </button>
+          </div>
+      </form>
+
+      <div class="content-from" #seleccionarHuesped>
+        <div class="conten-input-huespedes">
+          <div class="input-busqueda">
+            <input id="busqueda-de-huesped" class="input-general" type="text" placeholder="Buscar Huesped por identificador" (input)="buscarHuesoec($event)">
+            <img src="../../../assets/imagenes/lupa2.png" style="width: 40px;" alt="icono de lupa">
+          </div>
+          <br>
+          <div class="list-group" style="width: 100%; max-height: 290px; overflow: auto;">
+            <div class="content-huesped" #huepedSelect *ngFor="let huesped of huespedes" (click)="seleccionDeHuesped(huesped.hue_id)" [ngClass]="{'content-huesped-select':selectList.includes(huesped.hue_id)}">
+              <p class="sub-title" style="display: flex; flex-direction: row; justify-content: space-between;">Identificador: <span class="text-descripcion">{{huesped.hue_id}}</span></p>
+              <p class="sub-title" style="display: flex; flex-direction: row; justify-content: space-between;">Nombre: <span class="text-descripcion">{{huesped.hue_nom + ' ' + huesped.hue_ape}}</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="conten-buttons">
+            <button class="button-general" style="padding: 0px 10px 0px 10px;" (click)="registerReservation()">Registrar Reserva</button>
+            <button class="button-general" style="padding: 0px 10px 0px 10px;" (click)="registrarHuesped()">Registrar Huesped</button>
+        </div>
+      </div>
+
+      <div class="logo-imagen">
+          <img class="logo-hotel" src="../../../assets/imagenes/aH-150px.png" alt="Logo Hotel Alura">
+          <br>
+          <img class="imagen-reserva" src="../../../assets/imagenes/reservas-img-3-2.png" alt="Imagen de agendamiento">
+      </div>
+  </section>
+
+</body>

@@ -1,0 +1,29 @@
+<body>
+  <section class="container-login">
+    <form class="container-form" [formGroup]="formLogin">
+        <div class="forms">
+            <img class="imagen-logo-hotel-alura" src=".../../../assets/imagenes/lOGO-50PX.png" alt="logo-hotel-alura">
+
+        <h1 class="title">INICIAR SESIÓN</h1>
+
+        <div>
+            <h2 class="sub-title">USUARIO</h2>
+            <input class="input-general" type="text" formControlName="usuario" placeholder="Ingrese su nombre de usuario">
+        </div>
+
+        <div>
+            <h2 class="sub-title">CONTRASEÑA</h2>
+            <input class="input-general" type="password" formControlName="password" placeholder="Ingrese su contraseña">
+        </div>
+
+        <button class="button-general" id="getIn" (click)="login()">
+            Entar
+        </button>
+        </div>
+    </form>
+
+    <div class="container-imagen">
+        <img class="imagen-hotel-5-estrellas" src="../../../assets/imagenes/img-hotel-login-.png" alt="ilustración de hotel 5 estrellas">
+    </div>
+  </section>
+</body>

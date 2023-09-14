@@ -1,0 +1,72 @@
+<section class="content-list">
+  <div class="content-colum">
+    <div class="colum">
+      Identificador
+    </div>
+
+    <div class="colum">
+      Nombre
+    </div>
+
+    <div class="colum">
+      Apellido
+    </div>
+
+    <div class="colum">
+      Fecha de nacimineto
+    </div>
+
+    <div class="colum">
+      Nacionalidad
+    </div>
+
+    <div class="colum">
+      Teléfono
+    </div>
+  </div>
+  <div class="content-colum-huesped" *ngFor="let huesped of listHuespedes" (click)="seleccionarHuesped(huesped.hue_id, huesped)" [ngClass]="{'content-colum-huesped-select': listSelectHuesped.includes(huesped.hue_id)}">
+    <div class="colum">
+      {{huesped.hue_id}}
+    </div>
+
+    <div class="colum">
+      {{huesped.hue_nom}}
+    </div>
+
+    <div class="colum">
+      {{huesped.hue_ape}}
+    </div>
+
+    <div class="colum">
+      {{convertDate(huesped.hue_fec_nac)}}
+    </div>
+
+    <div class="colum">
+      {{huesped.hue_nacionalidad}}
+    </div>
+
+    <div class="colum">
+      {{huesped.hue_telf}}
+    </div>
+  </div>
+</section>
+
+<section class="content-dialog" [ngClass]="{'noselect-dialog': !selectUpdate}">
+  <form class="form-dialog" [formGroup]="formHuesped">
+    <input class="input-general" style="background: #ffffff00;" type="text" placeholder="Nombre" formControlName="nombre">
+
+    <input class="input-general" style="background: #ffffff00;" type="text" placeholder="Apellido" formControlName="apellido">
+
+    <input class="input-general" style="background: #ffffff00;" type="date" placeholder="Fecha de nacimiento" formControlName="fechaNacimiento">
+
+    <input class="input-general" style="background: #ffffff00;" type="text" placeholder="Nacionalidad" formControlName="nacionalidad">
+
+    <input class="input-general" style="background: #ffffff00;" type="text" placeholder="Telefono" formControlName="telefono">
+
+    <br>
+    <br>
+
+    <button class="button-general" (click)="editarHUesped()">EDITAR HUESPED</button>
+  </form>
+</section>
+

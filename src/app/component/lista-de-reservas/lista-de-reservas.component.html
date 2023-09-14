@@ -1,0 +1,62 @@
+
+<section class="content-list">
+  <div class="content-colum">
+    <div class="colum">
+      Identificador
+    </div>
+
+    <div class="colum">
+      Fecha de ingreso
+    </div>
+
+    <div class="colum">
+      Fecha de salida
+    </div>
+
+    <div class="colum">
+      Valor
+    </div>
+
+    <div class="colum">
+      Forma de pago
+    </div>
+  </div>
+  <div class="content-colum-reserva" *ngFor="let reserva of listReservas" (click)="seleccionarReserva(reserva.res_id, reserva)" [ngClass]="{'content-colum-reserva-select': listSelectReservas.includes(reserva.res_id)}">
+    <div class="colum">
+      {{reserva.res_id}}
+    </div>
+
+    <div class="colum">
+      {{convertDate(reserva.res_fecha_entrada)}}
+    </div>
+
+    <div class="colum">
+      {{convertDate(reserva.res_fecha_salida)}}
+    </div>
+
+    <div class="colum">
+      {{reserva.res_valor}}
+    </div>
+
+    <div class="colum">
+      {{reserva.res_forma_pago}}
+    </div>
+  </div>
+</section>
+
+<section class="content-dialog" [ngClass]="{'noselect-dialog': !selectUpdate}">
+  <form class="form-dialog" [formGroup]="formularioDeReserva">
+    <input class="input-general" style="background: #ffffff00;" type="date" formControlName="fechaInit">
+
+    <input class="input-general" style="background: #ffffff00;" type="date" formControlName="fechaOut">
+
+    <input class="input-general" style="background: #ffffff00;" type="test" placeholder="Forma de pago" formControlName="formaDePago">
+
+    <input class="input-general" style="background: #ffffff00;" type="number" placeholder="Valor" formControlName="valor">
+
+    <br>
+    <br>
+
+    <button class="button-general" (click)="editarReserva()">EDITAR RESERVA</button>
+  </form>
+</section>

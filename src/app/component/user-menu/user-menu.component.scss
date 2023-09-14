@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body{
+  height: 715px;
+  background: #0c89c783;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.conten-menu{
+  display: flex;
+  flex-direction: row;
+  width: 850px;
+  height: 450px;
+  background: white;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0C8Ac7;
+  width: 400px;
+}
+
+.imagen-menu{
+  width: 150px;
+  padding: 50px 0px 0px 0px;
+}
+
+.separador{
+  width: 200px;
+  border: 1px solid white;
+  margin: 10px 0px 20px 0px;
+}
+
+.menu-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.icon-item{
+  color: red;
+  width: 32px;
+  padding: 0px 5px 0px 0px;
+}
+
+.text-parrafo-menu{
+  color: white;
+  font-family: 'Acme', sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.text-parrafo-menu:hover{
+  font-weight: bolder;
+}
+
+.header-menu{
+  width: 100%;
+  background: #76BBDF;
+  margin: 75px 0px 25px 0px;
+  padding: 15px 0px;
+}
+
+.sub-title-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-sub-title{
+  color: white;
+  font-family: 'Acme', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.text-title{
+  color: white;
+  font-family: 'Acme', sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+  margin: 20px 0px 0px 30px;
+}
+
+.body-menu{
+  margin: 0px 40px;
+}
+
+.text-parrafo{
+  color: black;
+  font-family: 'Acme', sans-serif;
+  font-family: serif;
+  text-align: justify;
+}

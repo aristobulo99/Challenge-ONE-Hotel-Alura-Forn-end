@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body{
+  height: 715px;
+  background: #0c89c783;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.content-reserva{
+  display: flex;
+  flex-direction: row;
+  width: 770px;
+  height: 495px;
+  background: white;
+}
+
+.content-from{
+  padding: 45PX;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-button{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.logo-imagen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0C8Ac7;
+}
+
+.logo-hotel{
+  width: 100px;
+}
+
+.imagen-reserva{
+  width: 400px;
+}
+
+.input-busqueda{
+  display: flex;
+  flex-direction: row;
+}
+
+.text-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.conten-input-huespedes{
+  display: flex;
+  flex-direction: column;
+}
+
+.content-huesped{
+  width: 344;
+  height: 54;
+  padding: 8px 16px;
+  border: 1px solid #DEE2E6;
+  border-left: none;
+  border-top: none;
+  border-inline: none;
+}
+
+.content-huesped:hover{
+  background: #DEE2E6;
+}
+
+.content-huesped-select{
+  width: 344;
+  height: 54;
+  padding: 8px 16px;
+  border: 1px solid #DEE2E6;
+  border-left: none;
+  border-top: none;
+  border-inline: none;
+  background: #82C2E2;
+}
+
+.text-descripcion{
+  color: black;
+  font-family: 'Acme', sans-serif;
+  font-family: serif;
+  text-align: justify;
+}
+.conten-buttons{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}

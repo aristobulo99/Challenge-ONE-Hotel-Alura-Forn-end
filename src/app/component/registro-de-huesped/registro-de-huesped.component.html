@@ -1,0 +1,62 @@
+<body>
+  <section class="conten-huesped">
+    <div class="logos-imagenes">
+      <div class="content-boton-back">
+        <button class="button-back" (click)="clickBack()">Back</button>
+      </div>
+      <img class="logo-hotel" src="../../../assets/imagenes/aH-150px.png" alt="Logo Hotel Alura">
+      <img class="imagen-registro" src="../../../assets/imagenes/registro.png" alt="Ilustracion de registro de datos">
+    </div>
+
+    <form class="content-from" [formGroup]="formHuesped">
+      <h1 class="title">REGISTRO DE HUÉSPED</h1>
+
+      <div>
+        <h2 class="sub-title">NOMBRE</h2>
+        <input class="input-general" type="text" formControlName="nombre">
+      </div>
+
+      <div>
+        <h2 class="sub-title">APELLIDO</h2>
+        <input class="input-general" type="text" formControlName="apellido">
+      </div>
+
+      <div>
+        <h2 class="sub-title">FECHA DE NACIMIENTO</h2>
+        <input class="input-general" type="date" formControlName="fechaNacimiento">
+      </div>
+
+      <div>
+        <h2 class="sub-title">NACIONALIDAD</h2>
+        <select class="input-select" formControlName="nacionalidad">
+            <option value=""></option>
+            <option value="COLOMBIA">COLOMBIA</option>
+            <option value="VENEZUELA">VENEZUELA</option>
+            <option value="ECUADOR">ECUADOR</option>
+            <option value="PERU">PERU</option>
+            <option value="BRASIL">BRASIL</option>
+            <option value="BOLIVIA">BOLIVIA</option>
+            <option value="PARAGUAY">PARAGUAY</option>
+            <option value="URUGUAY">URUGUAY</option>
+            <option value="CHILE">CHILE</option>
+            <option value="ARGENTINO">ARGENTINO</option>
+            <option value="PANAMA">PANAMA</option>
+            <option value="MEXICO">MEXICO</option>
+        </select>
+      </div>
+
+      <div>
+        <h2 class="sub-title">TELEFONO</h2>
+        <input class="input-general" type="text" formControlName="telefono">
+      </div>
+
+      <div class="content-button">
+        <button class="button-general" (click)="registrarHuesped()">
+            GUARDAR
+        </button>
+    </div>
+
+    </form>
+
+  </section>
+</body>

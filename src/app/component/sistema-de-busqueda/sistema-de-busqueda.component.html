@@ -1,0 +1,46 @@
+<body>
+  <section class="content-busqueda">
+    <div class="content-title">
+      <h1 class="title">SISTEMA DE BÚQUEDA</h1>
+    </div>
+
+    <div class="content-input-logo">
+      <img class="logo-alura" src="../../../assets/imagenes/aH-150px.png" alt="logo hotel alura">
+      <form class="content-input-button" [formGroup]="formBusqueda">
+        <input class="input-general" type="number" formControlName="identificador">
+        <button class="button-general" (click)="realizarBusqueda()">
+          BUSCAR
+        </button>
+      </form>
+    </div>
+
+    <div class="content-table">
+      <div class="button-seleccion">
+        <button class="button-general" style="width: 175px;" [ngClass]="{'selectButton':seleccionDeBusqueda}" (click)="selectHuesped()">
+          <img src="../../../assets/imagenes/icon-buscar.png" alt="lupa de busqueda de huespedes">
+          Huéspedes
+        </button>
+        <button class="button-general" style="width: 175px;" [ngClass]="{'selectButton':!seleccionDeBusqueda}" (click)="selectReserva()">
+          <img src="../../../assets/imagenes/icon-reservas.png" alt="lupa de busqueda de huespedes">
+          Reservas
+        </button>
+      </div>
+      <div style="width: 100%; height: 80%; overflow: auto;">
+        <ng-container *ngIf="seleccionDeBusqueda; else seleccionDeReservas">
+          <app-lista-de-huespedes [identificador]="identificador" [selectDelete]="selectDelete" [selectUpdate]="selectUpdate" (emmitEdicion)="edicionRealizada($event)"></app-lista-de-huespedes>
+        </ng-container>
+
+        <ng-template #seleccionDeReservas>
+          <app-lista-de-reservas [identificador]="identificador" [selectDelete]="selectDelete" [selectUpdate]="selectUpdate" (emmitEdicion)="edicionRealizada($event)"></app-lista-de-reservas>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="system-update-delete">
+      <button class="button-general" style="margin: 0px 0px 0px 10px;" (click)="updateHuesped()">EDITAR</button>
+      <br>
+      <button class="button-general" style="margin: 0px 0px 0px 10px;" (click)="deleteHuesped()">ELIMINAR</button>
+    </div>
+
+  </section>
+</body>
